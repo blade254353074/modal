@@ -32,3 +32,5 @@ modal.show({
 1. npm install 
 2. gulp or gulp watch
 3. open dest/index.html
+# demo
+[http://blade254353074.github.io/modal/](http://blade254353074.github.io/modal/)
