@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/blade254353074/modal/master/dest/assets/css/normalize.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/blade254353074/modal/master/dest/assets/css/button.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/blade254353074/modal/master/dest/assets/css/modal.css">
+    <style>
+    p {
+        margin: 0;
+    }
+
+    #console {
+        margin-top: 20px;
+    }
+    </style>
+    <script src="https://raw.githubusercontent.com/blade254353074/modal/master/dest/assets/js/jquery.js"></script>
+    <script src="https://raw.githubusercontent.com/blade254353074/modal/master/dest/assets/js/modal.js"></script>
+</head>
+
+<body>
+    <blockquote>
+        <button id="open" class="btn btn-primary">Open Modal</button>
+        <div id="console"></div>
+    </blockquote>
+    <script>
+    $(function() {
+        var $open = $('#open');
+        var $console = $('#console');
+
+        $open.on('click', function() {
+            $$.modal.show({
+                title: 'Information',
+                content: 'Content <br>text or html',
+                type: 'confirm',
+                before: function() {
+                    $console.append('<p>before</p>');
+                },
+                after: function() {
+                    $console.append('<p>after</p>');
+                },
+                cancel: function() {
+                    $console.append('<p>cancel</p>');
+                },
+                confirm: function() {
+                    $console.append('<p>confirm</p>');
+                },
+                hide: function() {
+                    $console.append('<p>hide</p>');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>
