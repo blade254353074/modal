@@ -16,7 +16,7 @@
  * @method    hide
  *
  */
-modal.show({
+$$.modal.show({
     title: '标题',
     content: '内容',
     type: 'confirm',
